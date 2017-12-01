@@ -14,14 +14,16 @@ func main() {
 	}
 	
 	var sum int
+	lookupStr := inputString + inputString
+	fmt.Println(len(inputString), len(lookupStr))
 	for pos, char := range inputString {
 		var n1, n2 int
 		// convert string value to integer
 		n1 = int(char - 48)
-		if (pos + 1 < len(inputString)) {
-			n2 = int(inputString[pos + 1])
+		if (len(os.Args) > 2 && os.Args[2] == "half") {
+			n2 = int(lookupStr[pos + len(inputString) / 2])
 		} else {
-			n2 = int(inputString[0])
+			n2 = int(lookupStr[pos + 1])
 		}
 		n2 -= 48
 
