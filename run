@@ -27,6 +27,10 @@ case "$1" in
         ./rust-bin"
         ;;
 
+    "swift")
+        docker run --rm -v "$PWD"/"$2":/mycode/"$2" -w /mycode swift swift "${@:2}"
+        ;;
+
     *)
         echo "Unknown language $1"
         ;;
