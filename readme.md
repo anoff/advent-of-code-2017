@@ -14,7 +14,7 @@ I want to use the following languages at least once during this course:
 * [ ] C
 * [ ] F#
 * [ ] Swift
-* [ ] Python
+* [x] Python
 * [ ] Lua
 * [ ] Java
 
@@ -39,11 +39,21 @@ I tried to select the smallest possible images:
 | rust | [frolvlad/alpine-rust:latest](https://hub.docker.com/r/frolvlad/alpine-rust/) | 220MB |
 | go | [golang:1.9-alpine](https://hub.docker.com/_/golang/) | 269MB |
 
+## Usage 🏃‍
 
-## day1
+For each challenge put the input strings into a file `1.input`, `2.input`, .. and `cat` it into the command when calling the solution.
+
+### Day1
 
 **Language**: `go`
 
-**Usage**: `./run go 1-captcha.go 112334233`
+**Usage**: `./run go 1-captcha.go $(cat 1.input)`
 
 To run the modified challenge of _half-way round the string_ matching `go run 1-captcha.go 123123 half`
+
+### Day2
+
+**Language**: `python`
+
+**Usage**: `./run python 2-checksum.py $(cat 2.input)`
+
