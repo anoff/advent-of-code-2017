@@ -15,7 +15,6 @@ func main() {
 	
 	var sum int
 	lookupStr := inputString + inputString
-	fmt.Println(len(inputString), len(lookupStr))
 	for pos, char := range inputString {
 		var n1, n2 int
 		// convert string value to integer
