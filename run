@@ -1,0 +1,27 @@
+#!/bin/bash
+
+if [ $# -lt 2 ]
+  then
+    echo "Usage: $0 <language> <filename> [args]"
+    echo "  Where <language> can be one of the following: go, node, ts, python, rust, f#"
+    exit
+fi
+
+case "$1" in
+    
+    "go")
+        docker run --rm -v "$PWD":/mycode -w /mycode golang:1.9-alpine go run "${@:2}"
+        ;;
+    
+    "node")
+        docker run --rm -v "$PWD":/mycode -w /mycode node:8-alpine node "${@:2}"
+        ;;
+
+    "python")
+        docker run --rm -v "$PWD":/mycode -w /mycode python:3-alpine python "${@:2}"
+        ;;
+
+    *)
+        echo "Unknown language $1"
+        ;;
+esac

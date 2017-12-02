@@ -20,7 +20,14 @@ I want to use the following languages at least once during this course:
 
 ### Docker 🐳
 
-Don't want to put a bunch of compilers and runtimes on my machine so all code should be executable in a docker container. The docker images are hidden in a `Makefile`.
+Don't want to put a bunch of compilers and runtimes on my machine so all code should be executable in a docker container. The docker images and run commands are hidden in the [run script](./run).
+
+```sh
+# use the following to run go code
+./run go myfile.go argument1
+# or node
+./run node myfile.js argument1
+```
 
 ## day1
 
