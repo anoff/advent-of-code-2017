@@ -47,7 +47,7 @@ For each challenge put the input strings into a file `1.input`, `2.input`, .. an
 
 **Language**: `go`
 
-**Usage**: `./run go 1-captcha.go $(cat 1.input)`
+**Usage**: `./run go 1-captcha.go "$(cat 1.input)"`
 
 To run the modified challenge of _half-way round the string_ matching `go run 1-captcha.go 123123 half`
 
@@ -55,5 +55,7 @@ To run the modified challenge of _half-way round the string_ matching `go run 1-
 
 **Language**: `python`
 
-**Usage**: `./run python 2-checksum.py $(cat 2.input)`
+**Usage**: `./run python 2-checksum.py "$(cat 2.input)"`
+
+For part2: `./run python 2-checksum.py "$(cat 2.input)" divisible`
 
