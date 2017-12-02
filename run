@@ -21,6 +21,12 @@ case "$1" in
         docker run --rm -v "$PWD":/mycode -w /mycode python:3-alpine python "${@:2}"
         ;;
 
+    "rust")
+        docker run --rm -v "$PWD"/"$2":/mycode/"$2" -w /mycode frolvlad/alpine-rust /bin/sh -c " \
+        rustc -o rust-bin \"${@:2}\"; \
+        ./rust-bin"
+        ;;
+
     *)
         echo "Unknown language $1"
         ;;
