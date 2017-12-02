@@ -23,8 +23,8 @@ case "$1" in
 
     "rust")
         docker run --rm -v "$PWD"/"$2":/mycode/"$2" -w /mycode frolvlad/alpine-rust /bin/sh -c " \
-        rustc -o rust-bin \"${@:2}\"; \
-        ./rust-bin"
+        rustc -o rust-bin $2; \
+        ./rust-bin \"${@:3}\""
         ;;
 
     "swift")
@@ -32,9 +32,10 @@ case "$1" in
         ;;
 
     "fs")
+        ARGS="\"$3\" ${@:4}"
         docker run --rm -v "$PWD"/"$2":/mycode/"$2" -w /mycode fsharp:4.1 /bin/sh -c " \
-        fsharpc -o mycode.exe \"${@:2}\"; \
-        mono mycode.exe"
+        fsharpc -o mycode.exe $2 > /dev/null; \
+        mono mycode.exe ${ARGS}"
         ;;
 
     *)

@@ -12,7 +12,7 @@ I want to use the following languages at least once during this course:
 * [ ] bash
 * [ ] rust
 * [ ] C
-* [ ] F#
+* [x] F#
 * [ ] Swift
 * [x] Python
 * [ ] Lua
@@ -54,9 +54,12 @@ To run the modified challenge of _half-way round the string_ matching `go run 1-
 
 ### Day2
 
-**Language**: `python`
+**Language**: `python, F#`
 
-**Usage**: `./run python 2-checksum.py "$(cat 2.input)"`
+**Usage**:
+* `./run python 2-checksum.py "$(cat 2.input)"`
+* `./run fs 2-checksum.fs "$(cat 2.input)"`
 
-For part2: `./run python 2-checksum.py "$(cat 2.input)" divisible`
-
+**Part2**:
+* `./run python 2-checksum.py "$(cat 2.input)" divisible`
+* `./run fs 2-checksum.fs "$(cat 2.input)" divisible`
