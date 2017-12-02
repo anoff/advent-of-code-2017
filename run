@@ -31,6 +31,12 @@ case "$1" in
         docker run --rm -v "$PWD"/"$2":/mycode/"$2" -w /mycode swift:4 swift "${@:2}"
         ;;
 
+    "fs")
+        docker run --rm -v "$PWD"/"$2":/mycode/"$2" -w /mycode fsharp:4.1 /bin/sh -c " \
+        fsharpc -o mycode.exe \"${@:2}\"; \
+        mono mycode.exe"
+        ;;
+
     *)
         echo "Unknown language $1"
         ;;
