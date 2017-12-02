@@ -28,7 +28,7 @@ case "$1" in
         ;;
 
     "swift")
-        docker run --rm -v "$PWD"/"$2":/mycode/"$2" -w /mycode swift swift "${@:2}"
+        docker run --rm -v "$PWD"/"$2":/mycode/"$2" -w /mycode swift:4 swift "${@:2}"
         ;;
 
     *)

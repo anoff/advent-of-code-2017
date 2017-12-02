@@ -29,6 +29,17 @@ Don't want to put a bunch of compilers and runtimes on my machine so all code sh
 ./run node myfile.js argument1
 ```
 
+I tried to select the smallest possible images:
+
+| Language | Image | Size |
+|----------|-------|------|
+| node | [node:8-alpine](https://hub.docker.com/_/node/) | 65.8MB |
+| python | [python:3-alpine](https://hub.docker.com/_/python/) | 89.1MB |
+| swift | [swift:4](https://hub.docker.com/_/swift/) | 1.31GB |
+| rust | [frolvlad/alpine-rust:latest](https://hub.docker.com/r/frolvlad/alpine-rust/) | 220MB |
+| go | [golang:1.9-alpine](https://hub.docker.com/_/golang/) | 269MB |
+
+
 ## day1
 
 **Language**: `go`
