@@ -11,7 +11,7 @@ I want to use the following languages at least once during this course:
 * [x] golang
 * [ ] bash
 * [ ] rust
-* [ ] C
+* [x] C
 * [x] F#
 * [ ] Swift
 * [x] Python
@@ -66,3 +66,9 @@ To run the modified challenge of _half-way round the string_ matching `go run 1-
 **Part2**:
 * `./run python 2-checksum.py "$(cat 2.input)" divisible`
 * `./run fs 2-checksum.fs "$(cat 2.input)" divisible`
+
+### Day3
+
+**Language**: `C`
+
+**Usage**: `./run c 3-spiral.c "$(cat 3.input)"`
