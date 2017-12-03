@@ -3,7 +3,7 @@
 if [ $# -lt 2 ]
   then
     echo "Usage: $0 <language> <filename> [args]"
-    echo "  Where <language> can be one of the following: go, node, ts, python, rust, f#"
+    echo "  Where <language> can be one of the following: go, node, python, rust, fs, swift, java, c, sh"
     exit
 fi
 
@@ -43,6 +43,17 @@ case "$1" in
         docker run --rm -v "$PWD"/"$2":/mycode/"$2" -w /mycode frolvlad/alpine-gcc /bin/sh -c " \
         gcc -o mycode $2 > /dev/null; \
         ./mycode ${ARGS}"
+        ;;
+
+    "sh")
+        docker run --rm -v "$PWD":/mycode -w /mycode alpine:3.7 /bin/sh "${@:2}"
+        ;;
+
+    "java")
+        FILE=$(basename $2)
+        docker run --rm -v "$PWD"/"$2":/mycode/"$2" -w /mycode anapsix/alpine-java:8_jdk /bin/sh -c " \
+        javac $2; \
+        java -cp \"$(dirname $2)\" \"${FILE%$'.java'}\" ${@:3}"
         ;;
 
     *)

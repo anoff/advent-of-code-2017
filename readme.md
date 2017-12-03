@@ -33,9 +33,11 @@ I tried to select the smallest possible images:
 
 | Language | Image | Size |
 |----------|-------|------|
+| Bash | [alpine:3.7](https://hub.docker.com/_/alpine/) | 4.14MB |
 | C | [frolvlad/alpine-gcc:latest](https://hub.docker.com/r/frolvlad/alpine-gcc/) | 99.2MB |
 | F# | [fsharp:4.1](https://hub.docker.com/_/fsharp/) | 550MB |
 | go | [golang:1.9-alpine](https://hub.docker.com/_/golang/) | 269MB |
+| Java | [anapsix/alpine-java:8_jdk](https://store.docker.com/community/images/anapsix/alpine-java/tags) | 173MB |
 | node | [node:8-alpine](https://hub.docker.com/_/node/) | 65.8MB |
 | python | [python:3-alpine](https://hub.docker.com/_/python/) | 89.1MB |
 | rust | [frolvlad/alpine-rust:latest](https://hub.docker.com/r/frolvlad/alpine-rust/) | 220MB |
