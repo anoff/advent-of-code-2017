@@ -38,6 +38,13 @@ case "$1" in
         mono mycode.exe ${ARGS}"
         ;;
 
+    "c")
+        ARGS="\"$3\" ${@:4}"
+        docker run --rm -v "$PWD"/"$2":/mycode/"$2" -w /mycode frolvlad/alpine-gcc /bin/sh -c " \
+        gcc -o mycode $2 > /dev/null; \
+        ./mycode ${ARGS}"
+        ;;
+
     *)
         echo "Unknown language $1"
         ;;

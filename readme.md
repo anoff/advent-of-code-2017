@@ -33,6 +33,7 @@ I tried to select the smallest possible images:
 
 | Language | Image | Size |
 |----------|-------|------|
+| C | [frolvlad/alpine-gcc:latest](https://hub.docker.com/r/frolvlad/alpine-gcc/) | 99.2MB |
 | F# | [fsharp:4.1](https://hub.docker.com/_/fsharp/) | 550MB |
 | go | [golang:1.9-alpine](https://hub.docker.com/_/golang/) | 269MB |
 | node | [node:8-alpine](https://hub.docker.com/_/node/) | 65.8MB |
